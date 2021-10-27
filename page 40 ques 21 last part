@@ -1,0 +1,16 @@
+//non recursive version
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int question(int n){
+    if(n%2 != 0) n=3*n+1;
+    return n/2;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<question(n);
+    return 0;
+}

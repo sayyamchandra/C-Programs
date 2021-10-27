@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//this is the function for factorial 
+long long factorial(int n){
+    if(n<0) cout<<"Not possible in this program"<<"\n";
+    long long product =1;
+    for(int i=n;i>=1;i--) product*=i;
+    return product;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<factorial(n);
+    return 0;
+}

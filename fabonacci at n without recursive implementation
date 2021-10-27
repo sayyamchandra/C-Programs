@@ -1,0 +1,25 @@
+//Fabonacci function without recursion
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int fabonacii(int n){
+    int f0 = 0,f1 = 1;
+    int fn = 0;
+    while(n!=1){
+        fn = f0+f1;
+        f0 = f1;
+        f1 = fn;
+        n--;
+    }
+    
+    return fn;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<fabonacii(n);
+    return 0;
+}

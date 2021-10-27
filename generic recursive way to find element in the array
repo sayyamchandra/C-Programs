@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//function will return index if found , -1 if not;
+template<class T>
+int recursivefinder(T arr[],int i,int n,T key){
+    if(arr[i] == key) return i;
+    else if(i==n) return -1;
+ recursivefinder(arr,i+1,n,key);
+    
+}
+
+int main(){
+    int arr[] = {1,2,3,6,6,6,7,8,9};
+    cout<<recursivefinder(arr,0,9,5);
+    
+}

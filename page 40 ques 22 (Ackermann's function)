@@ -1,0 +1,27 @@
+// Ackermann's function 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int power(int i,int j){
+    int ans =1;
+    while(j--){
+        ans*=i;
+    }
+    return ans;
+}
+
+int ackermann(int i,int j){
+    if(i>=2 &&j>=2) return ackermann(i-1,ackermann(i,j-1));
+     if(i>=2&&j==1) return ackermann(i-1,2);
+     if(i==1&&j>=1) return power(2,j); 
+}
+
+int main(){
+    int n;
+    cout<<ackermann(1,4);
+    cout<<endl<<ackermann(2,1);
+    cout<<endl<<ackermann(1,2);
+    return 0;
+}

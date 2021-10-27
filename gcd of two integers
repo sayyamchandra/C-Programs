@@ -1,0 +1,17 @@
+//gcd(Greatest Common Divisor of two function using Euclid's Recursive definition)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int gcd(int x,int y){
+    if(y==0) return x;
+    return  gcd(y,x%y);
+}
+
+int main(){
+    int n;
+    cout<<gcd(20,30)<<endl;
+    cout<<gcd(42,28)<<endl;
+    return 0;
+}

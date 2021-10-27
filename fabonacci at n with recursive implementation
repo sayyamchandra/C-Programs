@@ -1,0 +1,18 @@
+//write a recursive function to find the fabonacii number Fn. Test your code
+// Below is the solution in C++ programming language..
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int fabonacii(int n){
+    if(n==1) return 1;
+    if(n==0) return 0;
+    return fabonacii(n-1)+fabonacii(n-2);
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<fabonacii(n);
+    return 0;
+}

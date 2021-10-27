@@ -1,0 +1,17 @@
+// Question from a book (Data structure and algorithm in C) By Sartaj 
+// page 41 ques 21
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int question(int n){
+    if(n%2 == 0) return n/2;
+    return question(3*n+1);
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<question(n);
+    return 0;
+}

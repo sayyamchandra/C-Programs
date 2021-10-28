@@ -1,0 +1,27 @@
+//subset generation on the baisis of 0 and 1 (0 means element is there and 1 means element is not there)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void tobinary(int n){
+    vector<int> binary;
+    while(1){
+        binary.push_back(n%2);
+        n=n/2;
+        if(n == 0) break;
+    }
+    for(int i=binary.size()-1;i>-1;i--) cout<<binary[i];
+}
+
+void subset(int n){
+    int iteration = pow(2,n);
+    char binary[100];
+   for(int i=0;i<iteration;i++){
+       tobinary(i);cout<<"\n";
+   }
+}
+
+int main(){
+    subset(3);
+    
+}

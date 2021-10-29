@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//accumulate function
+
+int fn(int arr[],int n){
+    return accumulate(arr,arr+n,1,multiplies<int>());
+}
+
+
+int main(){
+    
+int arr[3] = {1,2,3};
+int sum = fn(arr,3);
+cout<<sum;
+ 
+ 
+ return 0;
+    
+}

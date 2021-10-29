@@ -1,0 +1,32 @@
+//there is a minor problem in this program, the input array is print twice and i am not able to figure out why....
+
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+void permutations(T list[],int m){
+    T test_list[m];
+    copy(list,list+m+1,test_list);
+    do{
+        copy(list,list+m+1,ostream_iterator<T>(cout,""));
+        cout<<"\n";
+    }
+    while(next_permutation(list,list+m+1));
+    
+     do{
+        copy(test_list,test_list+m+1,ostream_iterator<T>(cout,""));
+        cout<<"\n";
+    }
+    while(prev_permutation(test_list,test_list+m+1));
+}
+
+
+
+int main(){
+  char str[]={'d','a','b','c'};
+  permutations(str,3);
+ 
+ 
+ return 0;
+    
+}

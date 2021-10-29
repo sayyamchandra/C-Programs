@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+
+int main(){
+ 
+ int value = 0;
+ int arr1[5] = {1,2,3,4,5};
+ int arr2[5] = {1,2,3,4,5};
+ 
+ //inner_product(start1,end1,start2,value) : end 1 is exclusive and it return int value
+ int result = inner_product(arr1,arr1+5,arr2,value);
+ cout<<result;
+ 
+ return 0;
+    
+}

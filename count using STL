@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+int countno(T list[],int n,int key){
+    return count(list,list+n,key);
+}
+
+
+int main(){
+  char str[]={'d','d','b','a'};
+  cout<<countno(str,4,'d');
+ 
+ 
+ return 0;
+    
+}

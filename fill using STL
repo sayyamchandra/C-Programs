@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+void fillthekey(T list[],int n,int key){
+ fill(list,list+n,key);
+    for(int i=0;i<n;i++) cout<<list[i];
+}
+
+
+int main(){
+ 
+ char st[4];
+ fillthekey(st,4,'0');
+ 
+ return 0;
+    
+}

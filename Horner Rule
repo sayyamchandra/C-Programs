@@ -1,0 +1,23 @@
+//polynomial evaluation using Horner's Rule
+
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+T horner(T coeff[],int n,int x){
+    int value = coeff[n];
+    for(int i=1;i<=n;i++) value = value*x+coeff[n-i];
+    return value;
+}
+
+
+
+int main(){
+ 
+int arr[] = {1,2,3,4,5};
+int ans = horner(arr,4,1);
+cout<<ans;
+ 
+ return 0;
+    
+}

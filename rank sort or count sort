@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+void ranking(T a[],int n,int r[]){
+    for(int i=0;i<n;i++) r[i] = 0;
+    for(int i=1;i<n;i++)
+        for(int j=0;j<i;j++)
+            if(a[j]<=a[i]) r[i]++;
+            else r[j]++;
+}
+
+template<class T>
+void sorting(T a[],int n,int r[]){
+    T* u = new T[n];
+    for(int i=0;i<n;i++) u[r[i]] = a[i];
+    for(int i=0;i<n;i++) a[i] = u[i];
+    delete[] u;
+}
+
+
+int main(){
+ 
+int a[5] = {1,8,4,6,8};
+int r[5];
+ranking(a,5,r);
+for(int i=0;i<5;i++) cout<<r[i]<<" ";
+cout<<endl;
+sorting(a,5,r);
+for(int i=0;i<5;i++) cout<<a[i]<<" ";
+ 
+ return 0;
+    
+}

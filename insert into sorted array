@@ -1,0 +1,23 @@
+//C++ program 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+void inserting(T a[],int& n,T x){
+    int i;
+    for(int i=n-1;i>=0&&x<a[i];i--) a[i+1] = a[i];
+    a[i+1] = x;
+    n++;
+}
+
+int main(){
+ 
+int a[4] = {1,2,4,5};
+int n=4;
+inserting(a,n,3);
+for(int i=0;i<5;i++) cout<<a[i]<<" ";
+ 
+ return 0;
+    
+}

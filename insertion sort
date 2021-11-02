@@ -1,0 +1,34 @@
+// C++ implementation of Insertion Sort algorithm
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+ 
+template<class T>
+void inserting(T a[],int n,T x){
+    int i;
+    for(i=n-1;i>=0&&a[i]>x;i--){
+        a[i+1]  =a[i];
+    }
+    a[i+1] = x;
+}
+
+template<class T>
+void insertionsorting(T a[],int n){
+    for(int i=1;i<n;i++){
+        inserting(a,i,a[i]);
+    }
+}
+ 
+ 
+
+int main(){
+ 
+int a[4] = {1,2,10,5};
+int r[4];
+insertionsorting(a,4);
+for(int i=0;i<4;i++) cout<<a[i]<<" ";
+ 
+ return 0;
+    
+}

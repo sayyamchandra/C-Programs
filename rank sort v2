@@ -1,0 +1,36 @@
+//rank sorting (in place rearrangement)
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+void ranking(T a[],int n,int r[]){
+    for(int i=0;i<n;i++) r[i] = 0;
+    for(int i=1;i<n;i++)
+        for(int j=0;j<i;j++)
+            if(a[j]<=a[i]) r[i]++;
+            else r[j]++;
+}
+
+template<class T>
+void rearranging(T a[],int n,int r[]){
+    for(int i=0;i<n;i++){
+        while(i!=r[i]){
+            int t = r[i];
+            swap(a[i],a[t]);
+            swap(r[i],r[t]);
+        }
+    }    
+
+}
+
+int main(){
+ 
+int a[4] = {1,2,10,5};
+int r[4];
+ranking(a,4,r);
+rearranging(a,4,r);
+for(int i=0;i<4;i++) cout<<a[i]<<" ";
+ 
+ return 0;
+    
+}

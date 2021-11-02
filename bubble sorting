@@ -1,0 +1,25 @@
+//C++ program for bubble sorting in easy way
+
+#include<bits/stdc++.h>
+using namespace std;
+
+template<class T>
+void bubbling(T a[],int n){
+    for(int i=0;i<n-1;i++) 
+        if(a[i]>a[i+1]) swap(a[i],a[i+1]);
+}
+
+template<class T>
+void bubblesorting(T a[],int n){
+    for(int i=n;i>1;i--) bubbling(a,i);
+}
+
+int main(){
+ 
+int a[5] = {1,8,4,6,8};
+bubblesorting(a,5);
+for(int i=0;i<5;i++) cout<<a[i]<<" ";
+ 
+ return 0;
+    
+}

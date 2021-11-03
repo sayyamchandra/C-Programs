@@ -1,0 +1,33 @@
+//C++ implementation of binary search technique 
+// To use this algorithm, array must be sorted in ascending order.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+ 
+template<class T>
+int binarysearching(T a[],int n,T x){
+    int left =0 ;
+    int right = n-1;
+    while(left<=right){
+        int mid= (left+right)/2;
+        if(a[mid] ==x) return mid;
+        if(a[mid]>x) right = mid-1;
+        else left = mid+1;
+    }
+    
+    return -1;
+}
+ 
+ 
+
+int main(){
+ 
+int a[4] = {1,2,5,10};
+int indexofsearching = binarysearching(a,4,5);
+cout<<indexofsearching;
+ 
+ return 0;
+    
+}

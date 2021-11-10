@@ -1,0 +1,14 @@
+//Given an ascending sorted rotated array Arr of distinct integers of size N. The array is right rotated K times. Find the value of K.
+
+
+class Solution{
+public:	
+	int findKRotation(int arr[], int n) {
+	    
+	    for(int i=1;i<n;i++){
+	        if(arr[i-1]>arr[i]) return i;
+	    }
+	    return 0;
+	}
+
+};
